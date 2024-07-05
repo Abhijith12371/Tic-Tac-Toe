@@ -24,12 +24,11 @@ io.on('connection', (socket) => {
 
     socket.on('startGame', (playerName) => {
         if (!player1Socket) {
-            
             player1Socket = socket;
             player1Name = playerName;
             gameCode = generateGameCode(); // Generate game code
             player1Socket.emit('gameCode', gameCode); // Send game code to Player 1
-            alert(code)
+            io.emit('message', `${playerName} started the game with code ${gameCode}.`); // Emit message to all clients
             console.log(`${playerName} started the game with code ${gameCode}.`);
         } else {
             socket.emit('message', 'Game already started by another player.');
