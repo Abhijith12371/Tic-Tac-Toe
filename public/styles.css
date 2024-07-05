@@ -1,0 +1,110 @@
+/* Reset styles and basic setup */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 48px;
+    color: #61dafb;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    border: 2px solid #21a1f1;
+    border-radius: 10px;
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #61dafb;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+#scores {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+#scores div {
+    padding: 10px;
+    background-color: #1c1e22;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #61dafb;
+}
+
+#player-choice,
+#game-board {
+    background-color: #1c1e22;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+    /* Responsive adjustments */
+    #game-board {
+        width: 80%;
+    }
+}

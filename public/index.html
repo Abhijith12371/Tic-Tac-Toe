@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div id="player-choice">
+        <label>
+            Enter your name:
+            <input type="text" id="player-name">
+        </label>
+        <button id="start-game">Start Game</button>
+        <button id="join-game-show">Join Game</button>
+    </div>
+    <div id="join-section" style="display: none;">
+        <label>
+            Enter game code:
+            <input type="text" id="game-code-input">
+        </label>
+        <button id="join-game">Join Game</button>
+    </div>
+    <div id="game" style="display: none;">
+        <div id="game-board" class="board">
+            <div class="cell" data-cell="0"></div>
+            <div class="cell" data-cell="1"></div>
+            <div class="cell" data-cell="2"></div>
+            <div class="cell" data-cell="3"></div>
+            <div class="cell" data-cell="4"></div>
+            <div class="cell" data-cell="5"></div>
+            <div class="cell" data-cell="6"></div>
+            <div class="cell" data-cell="7"></div>
+            <div class="cell" data-cell="8"></div>
+        </div>
+        <button id="restart" style="display: none;">Restart Game</button>
+        <p id="message"></p>
+        <div id="scores">
+            <div id="player1-score">Player 1: 0</div>
+            <div id="player2-score">Player 2: 0</div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
