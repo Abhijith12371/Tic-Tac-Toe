@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     socket.on('gameCode', (code) => {
+        alert(code)
         message.textContent = `Share this code with your friend: ${code}`;
         joinSection.style.display = 'block';
         startGameBtn.disabled = true;
